@@ -1,0 +1,248 @@
+@media (max-width: 1199px){
+    body {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .book-now-cta .button {
+        margin: 0 10px;
+        min-width: 130px;
+        padding: 30px 20px;
+    }
+
+    .navigation ul li a {
+        font-size: 13px;
+        padding: 5px;
+    }
+
+    .mega-menu ul li.child-menu a,.mega-menu ul > li a {
+        font-size: 16px;
+    }
+
+    .banner-content {
+        max-width: 300px;
+    }
+
+    .banner-content h2 {
+        font-size: 32px;
+    }
+    
+    .intro-title {
+        font-size: 24px;
+        margin: 0 0 30px;
+        padding: 0 0 30px;
+    }  
+    
+    .nav-arrow {
+        top: 17px;
+    }
+
+    .nav-arrow:before, .nav-arrow:after {
+        width: 10px;
+        height: 2px;
+    }
+}
+
+@media (max-width: 991px){
+    .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-nav .owl-prev {
+        width: 30px;
+        height: 64px;
+        background-size: cover !important;
+    }
+
+    .intro-content {
+        max-width: 660px;
+    }    
+
+    .footer-link ul {
+        padding: 0 0 0 10px;
+    }
+
+    .footer-link ul li a {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .banner-slider .banner-item{
+        height: calc(100vh - 45px);
+    }
+
+    .navigation ul li a {
+        font-size: 10px;
+        padding: 3px;
+    }
+
+    .book-now-cta .button {
+        margin: 0 5px 0 5px;
+        min-width: 80px;
+        padding: 15px 5px;
+        font-size: 10px;
+    }
+
+    .header-search img {
+        max-width: 15px;
+    }
+
+    .mega-menu{
+        top: 45px;
+        padding: 15px 0;
+        min-height: 200px;
+    }
+
+    .mega-menu ul {
+        max-width: 250px;
+    }
+
+    .mega-menu ul ul {
+        top: 15px;
+        margin-left: 280px;
+    }
+}
+
+@media (max-width: 767px){
+    .visible-mobile{
+        display: block !important;
+    }
+
+    .header-main .navigation {
+        display: none;
+    }
+
+    .header-main {
+        justify-content: flex-end;
+    }
+
+    .book-now-cta .button {
+        margin: 0 15px 0 15px;
+        min-width: 100px;
+        padding: 20px 10px;
+        font-size: 14px;
+    }
+
+    .header-search img {
+        max-width: 100%;
+    }
+
+    .play-icon {
+        display: none;
+    }
+
+    .intro-section {
+        padding: 40px 0;
+    }
+
+    .intro-content {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+    
+    .intro-title {
+        font-size: 22px;
+        margin: 0 0 20px;
+        padding: 0 0 15px;
+    }
+
+    .tiles-img {
+        margin: 0 0 30px;
+    }
+
+    .tiles-section {
+        padding: 0 0 20px;
+    }
+
+    .footer-logo:before {
+        bottom: -15px;
+    }
+    
+    .footer-link ul {
+        padding: 30px 0 0 0;
+        text-align: center;
+    }
+
+    .menu-open .navigation {
+        display: block;
+    }
+
+    .navigation {
+        position: absolute;
+        top: 60px;
+        background: #FFF;
+        z-index: 11;
+        padding: 10px;
+        left: 0;
+        right: 0;
+        border: 1px solid #dfdfdf;
+        max-height: 500px;
+        overflow: auto;
+    }
+
+    .navigation ul {
+        display: block;
+    }
+
+    .navigation ul li a {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .mega-menu {
+        opacity: 1;
+        visibility: visible;
+        position: relative;
+        background: transparent;
+        border: 0;
+        padding: 0;
+        min-height: auto;
+        top: 0;
+        overflow: hidden;
+    }
+
+    .mega-menu .container {
+        padding: 0;
+    }
+
+    .mega-menu ul {
+        max-width: 100%;
+        padding: 0 0 0 20px;
+    }
+
+    .mega-menu ul li.child-menu a, .mega-menu ul > li a {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .mega-menu ul ul {
+        top: 0;
+        margin-left: 0;
+        opacity: 1;
+        visibility: visible;
+        position: relative;
+        display: none;
+    }
+
+    .nav-arrow {
+        top: -8px;
+        position: relative;
+        transform: rotate(90deg);
+        right: 10px;
+        width: 24px;
+        height: 24px;
+    }
+
+    .hidden-mobile {
+        display: none;
+    }
+
+    .mega-menu ul li.child-menu:hover ul {
+        display: none;
+    }
+
+    .mega-menu ul li.child-menu.submenu-open ul {
+        display: block;
+    }
+
+    .mega-menu ul li.child-menu.submenu-open .nav-arrow {
+        transform: rotate(-90deg);
+        top: 0;
+    }
+}     

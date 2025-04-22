@@ -1,0 +1,429 @@
+/* ========== Fonts =========== */
+@font-face {
+    font-family: 'Lora';
+    src: url('../fonts/Lora-Italic.eot');
+    src: url('../fonts/Lora-Italic.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Lora-Italic.woff2') format('woff2'),
+         url('../fonts/Lora-Italic.woff') format('woff'),
+         url('../fonts/Lora-Italic.ttf')  format('truetype'),
+         url('../fonts/Lora-Italic.svg#Lora') format('svg');
+}
+
+@font-face {
+    font-family: 'Museo Sans Bold';
+    src: url('../fonts/MuseoSans700.eot');
+    src: url('../fonts/MuseoSans700.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/MuseoSans700.woff2') format('woff2'),
+         url('../fonts/MuseoSans700.woff') format('woff'),
+         url('../fonts/MuseoSans700.ttf')  format('truetype'),
+         url('../fonts/MuseoSans700.svg#Museo Sans') format('svg');
+}
+
+@font-face {
+    font-family: 'Museo Sans';
+    src: url('../fonts/MuseoSans-300.eot');
+    src: url('../fonts/MuseoSans-300.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/MuseoSans-300.woff2') format('woff2'),
+         url('../fonts/MuseoSans-300.woff') format('woff'),
+         url('../fonts/MuseoSans-300.ttf')  format('truetype'),
+         url('../fonts/MuseoSans-300.svg#Museo Sans') format('svg');
+}
+
+/*========== Globle style ============= */
+body{
+    font-size: 20px;
+    line-height: 30px;
+    color: #28324f;
+    font-family: 'Museo Sans';
+}
+
+a {
+    color: #28324f;
+    transition: all 0.3s ease;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1170px;
+    }
+}
+
+
+/*============== HEADER STYLE ================= */
+.site-header {
+    position: relative;
+}
+
+.header-main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.navigation ul li a {
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    color: #29324f;
+    font-size: 14px;
+}
+
+.navigation ul li a:hover{
+    color: #e84b45;
+}
+
+.book-now-cta .button {
+    background: #e84b45;
+    color: #FFF;
+    font-size: 14px;
+    border: 0;
+    border-radius: 0;
+    padding: 30px;
+    min-width: 170px;
+    margin: 0 15px;
+}
+
+.book-now-cta .button:hover{
+    background: #29324f;
+}
+
+.header-search {
+    cursor: pointer;
+}
+
+.has-mega-menu a {
+    position: relative;
+}
+
+.has-mega-menu > a:after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    height: 20px;
+}
+
+.mega-menu { 
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 80px;
+    z-index: 2;
+    background: rgba(247, 247, 247, .85);
+    border-top: 1px solid #dfdfdf;
+    transition: all 0.3s ease;
+    min-height: 280px;
+    padding: 30px 0;
+    overflow: auto;
+}
+
+.has-mega-menu:hover .mega-menu{
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease;
+}
+
+.mega-menu ul  {
+    display: block;
+    max-width: 300px;
+}
+
+.mega-menu ul li a {
+    font-size: 20px;
+    position: static;
+}
+
+.mega-menu ul li a:hover {
+    text-decoration: underline;
+}
+
+.mega-menu ul ul {
+    position: absolute;
+    top: 30px;
+    margin-left: 330px;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.mega-menu ul li.child-menu a {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.mega-menu ul li.child-menu:hover ul {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease;
+}
+
+.nav-arrow {
+    position: absolute;
+    right: 0;
+    top: 25px;
+}
+  
+.nav-arrow:before,
+.nav-arrow:after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 2px);
+    right: 0;
+    width: 13px;
+    height: 3px;
+    border-radius: 9999px;
+    background-color: #000000;
+    transform-origin: calc(100% - 1px) 50%;
+}
+  
+.nav-arrow:before {
+    transform: rotate(45deg);
+}
+
+.nav-arrow:after {
+    transform: rotate(-45deg);
+}
+
+.mega-menu ul li.child-menu ul li a {
+    font-weight: 300;
+}
+
+.mega-menu ul li.child-menu a:hover .nav-arrow:before,
+.mega-menu ul li.child-menu a:hover .nav-arrow::after{
+    background-color: #e84b45;    
+}
+
+
+/*=========== Banner CSS =========== */
+.banner-slider .banner-item {
+    height: calc(100vh - 80px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.owl-carousel .owl-item img.cover-img {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+}
+
+.banner-item video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.play-icon img{
+    width: 80px !important;
+}
+
+.banner-content {
+    font-family: 'Lora';
+    color: #FFF;
+    max-width: 550px;
+}
+
+.banner-content h2 {
+    font-weight: 300;
+    margin: 0 0 30px;
+    font-size: 50px;
+}
+
+.owl-carousel .owl-nav .owl-next,.owl-carousel .owl-nav .owl-prev{
+    width: 50px;
+    height: 106px;
+    background-repeat: no-repeat !important;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    font-size: 0;
+    line-height: 0;
+    z-index: 1;
+}
+
+.owl-carousel .owl-nav .owl-prev {
+    background: url('../images/banner-arrow-left.png');
+}
+
+.owl-carousel .owl-nav .owl-next {
+    left: auto;
+    right: 0;
+    background: url('../images/banner-arrow-right.png');
+}
+
+/* ========== INTRO CSS ===========*/
+.intro-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.intro-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.intro-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 0 40px;
+    padding: 0 0 40px;
+    position: relative;
+}
+
+.intro-title:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: #e84b45;
+    width: 60px;
+    margin: 0 auto;
+}
+
+.expand-cont {
+    display: none;
+}
+
+.expand-btn {
+    font-size: 23px;
+    border: 1px solid #e84b45 !important;
+    color: #e84b45 !important;
+    padding: 4px 11px;
+    line-height: 30px;
+    vertical-align: middle;
+    border-radius: 30px;
+    width: 40px;
+    height: 40px;
+}
+
+.minus {
+    display: none;
+}
+
+.expand-btn.active .minus{
+    display: inline-block;
+}
+
+.expand-btn.active .plus{
+    display: none;
+}
+
+/* ============= Tiles CSS ================== */
+.tiles-section {
+    padding: 0 0 50px;
+}
+
+.tiles-img {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.20);
+    position: relative;
+}
+
+.tiles-cont {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    text-align: center;
+    background: rgba(255, 255, 255, .80);
+    font-size: 14px;
+    line-height: 22px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.tiles-img:hover .tiles-cont{
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease;
+}
+
+/* ======== Footer Css ======= */
+.site-footer {
+    background: #1e2744;
+    padding: 15px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.site-footer .col-md-3 {
+    position: relative;
+}
+
+.footer-logo:before {
+    content: "";
+    position: absolute;
+    width: 1000px;
+    background: #e84b45;
+    top: -20px;
+    bottom: -20px;
+    right: 0;
+}
+
+.footer-logo a {
+    position: relative;
+}
+
+.footer-link ul {
+    margin: 0;
+    padding: 0 0 0 30px;
+    list-style: none;
+}
+
+.footer-link ul li {
+    display: inline-block;
+}
+
+.footer-link ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    margin: 0 0 5px;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 10px;
+}
+
+.footer-link ul li a:hover{
+    color: #e84b45;
+}
